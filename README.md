@@ -1,12 +1,14 @@
 # Ishtiaq — portfolio
 
-React + TypeScript + Tailwind CSS + Framer Motion, built with Vite. Deployed to GitHub Pages by the workflow in `.github/workflows/deploy.yml` on every push to `main`.
+React + TypeScript + Tailwind CSS + Framer Motion, built with Vite.
+
+**Important:** the page source is `web/index.html` + `src/`. The `index.html` and `assets/` at the repo root are the *built* site. Run `npm run build` and commit them after every change, so GitHub Pages serves the latest version. (If Pages is set to "GitHub Actions", the workflow in `.github/workflows/deploy.yml` also builds and deploys automatically.)
 
 ## Run locally
 ```bash
 npm install
 npm run dev      # http://localhost:5173/Portfolio/
-npm run build    # production build into dist/
+npm run build    # builds the site into index.html + assets/ at the repo root
 ```
 
 ## Editing content
