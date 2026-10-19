@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: #0c0c0c;
+  font-family: 'Kanit', sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* project visuals */
+@keyframes eq { 0%, 100% { height: 25%; } 50% { height: 100%; } }
+@keyframes flick { 0%, 19%, 21%, 62%, 64%, 100% { opacity: 1; } 20%, 63% { opacity: 0.2; } }
+@keyframes alarm { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@keyframes doorL { 0%, 25%, 100% { transform: translateX(0); } 45%, 80% { transform: translateX(-100%); } }
+@keyframes doorR { 0%, 25%, 100% { transform: translateX(0); } 45%, 80% { transform: translateX(100%); } }
+@keyframes cloud { from { transform: translateX(-120%); } to { transform: translateX(520%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
