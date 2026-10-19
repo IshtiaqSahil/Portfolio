@@ -6,10 +6,12 @@ Static site: `index.html`, `style.css`, `main.js`, plus GSAP, ScrollTrigger and 
 Double-click `index.html`, or serve the folder: `npx serve .`
 
 ## Editing
-- **Text and projects:** all in `index.html`. Each project is a `<section class="chapter">`.
+- **Globe (opening screen):** the projects on the globe — name, one-liner, badge, colours and position on the sphere — are in the `PROJECTS` list at the top of `main.js`. It auto-advances every 6.5 s (`DUR` in `initGlobe`).
+- **Case studies:** the in-depth pages are the `<article class="case">` blocks near the bottom of `index.html`. They open from "Explore project" on the globe or "Deep dive" on each section, and can be linked directly as `#case-argus`, `#case-verity`, etc.
+- **Text and projects:** all in `index.html`. Each project section is a `<section class="chapter">`.
 - **Links:** search for `href="#"` and the `TODO` comments to add your demo, repo, GitHub, LinkedIn, Discord and résumé URLs.
 - **Project colours:** each section's `data-theme-bg` / `data-theme-accent` attributes. The page fades to these colours as you scroll.
-- **Add a project:** copy a `chapter` section, give it a new `id`, and add a matching `<li>` to the `.rail` list near the top.
+- **Add a project:** copy a `chapter` section and a `case` article with a new id, add a matching `<li>` to the `.rail` list, and add an entry to `PROJECTS` in `main.js`.
 - **Real screenshots:** put an `<img>` inside a project's `.stage` div in place of the illustration.
 
 ## Deploy

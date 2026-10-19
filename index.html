@@ -53,24 +53,37 @@
 
   <main id="top">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" data-theme-bg="#0a0c0f" data-theme-accent="#7c9bff">
-      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero__inner">
-        <p class="eyebrow hero__eyebrow"><span class="dot"></span>Developer · Modder · Hackathon builder</p>
-        <h1 class="hero__title" data-split>
-          I build <em>AI agents</em>,<br>
-          game servers <span class="amp">&amp;</span> mods.
-        </h1>
-        <div class="hero__foot">
-          <p class="hero__lede">Two hackathon certificates for multi-agent AI systems. A Minecraft network running on plugins I wrote myself. Mods, tools and a horror game in progress.</p>
-          <div class="hero__stats">
-            <div><b data-count="2">2</b><span>hackathon<br>certificates</span></div>
-            <div><b data-count="1.0000" data-decimals="4">1.0000</b><span>ARGUS<br>benchmark score</span></div>
-            <div><b data-count="6">6</b><span>projects<br>featured</span></div>
+    <!-- ============ GLOBE HERO ============ -->
+    <!-- The globe's projects (names, one-liners, colours, positions) live in the PROJECTS list at the top of main.js -->
+    <section class="globe-hero" id="globe" aria-label="Projects globe">
+      <canvas class="globe__canvas" id="globeCanvas" aria-hidden="true"></canvas>
+      <div class="globe__intro">
+        <p class="eyebrow hero__eyebrow"><span class="dot"></span>Ishtiaq Sahil · Developer &amp; modder</p>
+        <h1 class="globe__headline">I build AI agents, game servers <span class="amp">&amp;</span>&nbsp;mods.</h1>
+      </div>
+
+      <div class="globe__card" id="globeCard">
+        <div class="globe__meta">
+          <span class="chapter__num" id="gNum">01 <i>/ 06</i></span>
+          <span class="badge badge--award" id="gBadge">Hackathon certificate</span>
+        </div>
+        <div class="globe__swap" aria-live="polite">
+          <p class="chapter__event" id="gEvent">Averis × Monash Hackathon</p>
+          <h2 class="globe__title" id="gTitle">ARGUS</h2>
+          <p class="globe__line" id="gLine">Seven parallel agents and a confidence gate modelled on the fruit fly brain verify shipping documents. Scored 1.0000 on a 520-email benchmark.</p>
+        </div>
+        <div class="globe__actions">
+          <button class="btn" id="gExplore" data-magnetic>Explore project <span>→</span></button>
+          <div class="globe__nav">
+            <button id="gPrev" aria-label="Previous project" data-magnetic>←</button>
+            <button id="gNext" aria-label="Next project" data-magnetic>→</button>
           </div>
         </div>
+        <div class="globe__timer" aria-hidden="true"><span id="gTimer"></span></div>
       </div>
+
+      <ol class="globe__dots" id="gDots" aria-label="Jump to a project"></ol>
+      <p class="globe__hint mono">Drag to spin · click a point</p>
       <a href="#about" class="hero__scroll" data-cursor="Scroll"><span>Scroll</span><i></i></a>
     </section>
 
@@ -128,8 +141,9 @@
         </div>
         <ul class="tags"><li>Python</li><li>FastAPI</li><li>Multi-agent</li><li>Vercel</li></ul>
         <div class="chapter__links">
+          <button class="btn btn--deep" data-deep="argus" data-magnetic>Deep dive <span>→</span></button>
           <!-- TODO: replace # with your live demo and repo URLs -->
-          <a href="#" class="btn" data-magnetic>Live demo <span>↗</span></a>
+          <a href="#" class="btn btn--ghost" data-magnetic>Live demo <span>↗</span></a>
           <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
         </div>
       </div>
@@ -158,7 +172,8 @@
         </div>
         <ul class="tags"><li>Sui</li><li>Walrus</li><li>Gonka</li><li>LLM evaluation</li></ul>
         <div class="chapter__links">
-          <a href="#" class="btn" data-magnetic>Live demo <span>↗</span></a>
+          <button class="btn btn--deep" data-deep="verity" data-magnetic>Deep dive <span>→</span></button>
+          <a href="#" class="btn btn--ghost" data-magnetic>Live demo <span>↗</span></a>
           <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
         </div>
       </div>
@@ -198,16 +213,17 @@
         </div>
         <p class="chapter__event">Formerly Project Re-genesis</p>
         <h3 class="chapter__title" data-split>HelixMC</h3>
-        <p class="chapter__desc">A multi-server Minecraft network behind a Velocity proxy, with a hub and Rust-style survival servers. I wrote the core plugins myself: HelixSpawn handles spawning across 30+ game versions, and LoopManager runs the network's timed systems.</p>
+        <p class="chapter__desc">A multi-server Minecraft network behind a Velocity proxy, with a hub and Rust-style survival servers. I wrote the core plugins myself: HelixSpawn handles spawning and has gone through 30+ versions, and LoopManager runs the network's timed systems.</p>
         <div class="chapter__stats">
           <div><b data-count="1100" data-prefix="~">~1100</b><span>lines in HelixSpawn</span></div>
-          <div><b data-count="30" data-suffix="+">30+</b><span>versions supported</span></div>
+          <div><b data-count="30" data-suffix="+">30+</b><span>HelixSpawn versions</span></div>
           <div><b data-count="2">2</b><span>custom plugins</span></div>
         </div>
         <ul class="tags"><li>Java</li><li>Velocity</li><li>Paper</li><li>Plugin dev</li></ul>
         <div class="chapter__links">
+          <button class="btn btn--deep" data-deep="helix" data-magnetic>Deep dive <span>→</span></button>
           <!-- TODO: add server IP / Discord -->
-          <a href="#" class="btn" data-magnetic>Join the server <span>↗</span></a>
+          <a href="#" class="btn btn--ghost" data-magnetic>Join the server <span>↗</span></a>
         </div>
       </div>
       <div class="chapter__stage">
@@ -235,7 +251,8 @@
         </div>
         <ul class="tags"><li>Java</li><li>Fabric</li><li>Spotify Web API</li><li>OAuth</li></ul>
         <div class="chapter__links">
-          <a href="#" class="btn" data-magnetic>Download <span>↗</span></a>
+          <button class="btn btn--deep" data-deep="spotify" data-magnetic>Deep dive <span>→</span></button>
+          <a href="#" class="btn btn--ghost" data-magnetic>Download <span>↗</span></a>
           <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
         </div>
       </div>
@@ -283,6 +300,7 @@
         </div>
         <ul class="tags"><li>Node.js</li><li>Express</li><li>Google Sheets API</li><li>Render</li></ul>
         <div class="chapter__links">
+          <button class="btn btn--deep" data-deep="finance" data-magnetic>Deep dive <span>→</span></button>
           <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
         </div>
       </div>
@@ -325,6 +343,9 @@
         <p class="chapter__desc">A first-person horror game set in the SCP universe. Containment breaches, tight corridors and things that move when you aren't looking. Built in Unity 6 and still in active development.</p>
         <p class="redact"><span>Object class:</span> <mark>████████</mark> &nbsp; <span>Site:</span> <mark>██</mark> &nbsp; <span>Release:</span> <mark>████ ████</mark></p>
         <ul class="tags"><li>Unity 6</li><li>C#</li><li>Game design</li></ul>
+        <div class="chapter__links">
+          <button class="btn btn--deep" data-deep="scp" data-magnetic>Deep dive <span>→</span></button>
+        </div>
       </div>
       <div class="chapter__stage">
         <div class="stage stage--scp">
@@ -377,6 +398,233 @@
     <span>© 2026 Ishtiaq Sahil</span>
     <a href="#top" data-cursor="Top">Back to top ↑</a>
   </footer>
+
+  <!-- ============ CASE STUDIES ============
+       One <article> per project. Opened by "Explore project" on the globe or "Deep dive" on each section.
+       The visual at the top of each article is copied automatically from that project's section. -->
+  <div class="deep" id="deep" role="dialog" aria-modal="true" aria-label="Project case study" hidden>
+    <div class="deep__bar">
+      <button class="deep__close" id="deepClose" data-magnetic><span aria-hidden="true">←</span> Back</button>
+      <span class="deep__count mono" id="deepCount">01 / 06</span>
+      <button class="deep__next" id="deepNext" data-magnetic>Next project <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="deep__scroll" id="deepScroll" data-lenis-prevent>
+
+      <article class="case" data-case="argus" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge badge--award">Hackathon certificate</span><span class="chapter__event">Averis × Monash Hackathon</span></div>
+          <h2 class="case__title">ARGUS</h2>
+          <p class="case__lede">Catching mismatches between a Shipping Instruction and its Bill of Lading before they cost anyone a delayed container.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>1.0000</b><span>benchmark score</span></div>
+          <div><b>520</b><span>emails in the benchmark</span></div>
+          <div><b>7</b><span>field agents in parallel</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>The problem</h3>
+            <p>Freight teams receive Shipping Instructions and draft Bills of Lading by email and compare them by hand, field by field. One wrong consignee, port or weight can hold cargo at the dock or trigger amendment fees. The work is repetitive, and errors slip through when volume is high.</p>
+          </section>
+          <section class="case__block">
+            <h3>How it works</h3>
+            <ol class="case__steps">
+              <li><b>Ingest.</b> A FastAPI backend takes in the email, then extracts the SI and the BL.</li>
+              <li><b>Fan out.</b> Seven field agents run in parallel, each responsible for its own group of fields.</li>
+              <li><b>Gate.</b> Every answer passes through a confidence gate modelled on the fruit fly olfactory circuit, which turns many noisy signals into one decisive response.</li>
+              <li><b>Decide.</b> Results that clear the gate are returned. Anything below the threshold is held back instead of guessed.</li>
+            </ol>
+          </section>
+          <section class="case__block">
+            <h3>Result</h3>
+            <p>ARGUS scored a perfect 1.0000 on the 520-email benchmark and earned a certificate at the Averis × Monash hackathon.</p>
+            <!-- Add your role and placement here -->
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>Multi-agent orchestration</li><li>Vercel</li></ul>
+            <div class="chapter__links"><a href="#" class="btn">Live demo <span>↗</span></a><a href="#" class="btn btn--ghost">Source <span>↗</span></a></div>
+          </section>
+        </div>
+      </article>
+
+      <article class="case" data-case="verity" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge badge--award">Hackathon certificate</span><span class="chapter__event">MUBA Hacks 2026 · Sui Track &amp; Gonka Challenge</span></div>
+          <h2 class="case__title">Verity</h2>
+          <p class="case__lede">A trust layer for AI agents: independent judges, multilingual tests, and certificates anyone can check on-chain.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>3</b><span>independent judge models</span></div>
+          <div><b>3</b><span>languages: en, zh, ja</span></div>
+          <div><b>Sui</b><span>+ Walrus for evidence</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>The problem</h3>
+            <p>Anyone can claim their AI agent is accurate and safe. There is no neutral, verifiable record of how an agent actually performed, and one model grading another is easy to bias or game.</p>
+          </section>
+          <section class="case__block">
+            <h3>How it works</h3>
+            <ol class="case__steps">
+              <li><b>Submit.</b> An agent is registered for certification.</li>
+              <li><b>Test.</b> It runs through a test suite in English, Chinese and Japanese.</li>
+              <li><b>Judge.</b> Three different models score the answers independently.</li>
+              <li><b>Agree.</b> Their scores are combined into one consensus verdict.</li>
+              <li><b>Record.</b> The certificate is written to Sui, and the full evidence behind it is stored on Walrus.</li>
+            </ol>
+          </section>
+          <section class="case__block">
+            <h3>Why on-chain</h3>
+            <p>A certificate on Sui can't be quietly edited later, and the Walrus evidence lets anyone see why an agent passed. Trust comes from the record, not from whoever ran the test.</p>
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Sui</li><li>Walrus</li><li>Gonka</li><li>LLM evaluation</li></ul>
+            <div class="chapter__links"><a href="#" class="btn">Live demo <span>↗</span></a><a href="#" class="btn btn--ghost">Source <span>↗</span></a></div>
+          </section>
+        </div>
+      </article>
+
+      <article class="case" data-case="helix" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge">Minecraft network</span><span class="chapter__event">Formerly Project Re-genesis</span></div>
+          <h2 class="case__title">HelixMC</h2>
+          <p class="case__lede">A Minecraft network I run and develop: a proxy, a hub and Rust-style survival, held together by my own plugins.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>~1,100</b><span>lines in HelixSpawn</span></div>
+          <div><b>30+</b><span>HelixSpawn versions</span></div>
+          <div><b>2</b><span>custom plugins</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>Architecture</h3>
+            <p>Players connect to a Velocity proxy, which routes them between servers without disconnecting. The hub is the lobby, and the survival servers run Rust-style gameplay.</p>
+          </section>
+          <section class="case__block">
+            <h3>The plugins</h3>
+            <ol class="case__steps case__steps--plain">
+              <li><b>HelixSpawn.</b> Handles how and where players spawn. About 1,100 lines, refined over 30+ versions.</li>
+              <li><b>LoopManager.</b> Runs the network's timed systems so recurring jobs stay on schedule.</li>
+            </ol>
+          </section>
+          <section class="case__block">
+            <h3>History</h3>
+            <p>The network started life as Project Re-genesis and was rebuilt and renamed HelixMC.</p>
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Java</li><li>Velocity</li><li>Paper</li><li>Plugin development</li></ul>
+            <div class="chapter__links"><a href="#" class="btn">Join the server <span>↗</span></a></div>
+          </section>
+        </div>
+      </article>
+
+      <article class="case" data-case="spotify" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge">Fabric mod</span><span class="chapter__event">Minecraft 26.2 · Client side</span></div>
+          <h2 class="case__title">Spotify HUD</h2>
+          <p class="case__lede">Your music, inside the game. See what's playing and control it without alt-tabbing.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>26.2</b><span>Minecraft version</span></div>
+          <div><b>OAuth</b><span>sign-in from inside the game</span></div>
+          <div><b>3</b><span>controls: play, pause, skip</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>What it does</h3>
+            <p>A compact HUD shows the current track, artist and progress while you play. Play, pause and skip work from inside the game.</p>
+          </section>
+          <section class="case__block">
+            <h3>How it works</h3>
+            <ol class="case__steps">
+              <li><b>Sign in.</b> The OAuth flow starts in game, so there are no tokens to copy and paste.</li>
+              <li><b>Poll.</b> The mod reads playback state from the Spotify Web API.</li>
+              <li><b>Render.</b> A Fabric HUD overlay draws the now-playing card on screen.</li>
+              <li><b>Control.</b> Inputs are sent back to Spotify as playback commands.</li>
+            </ol>
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Java</li><li>Fabric</li><li>Spotify Web API</li><li>OAuth</li></ul>
+            <div class="chapter__links"><a href="#" class="btn">Download <span>↗</span></a><a href="#" class="btn btn--ghost">Source <span>↗</span></a></div>
+          </section>
+        </div>
+      </article>
+
+      <article class="case" data-case="finance" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge">Web app</span><span class="chapter__event">Built for my brother</span></div>
+          <h2 class="case__title">Finance tracker</h2>
+          <p class="case__lede">A budgeting app that keeps a Google Sheet as its database, so nothing is ever locked away.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>Sheets</b><span>as the database</span></div>
+          <div><b>Express</b><span>Node.js backend</span></div>
+          <div><b>Render</b><span>hosting</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>Why a spreadsheet</h3>
+            <p>My brother already tracked money in Google Sheets. Keeping the sheet as the database means he can still open it and edit anything by hand, and there is no separate database to run.</p>
+          </section>
+          <section class="case__block">
+            <h3>How it works</h3>
+            <ol class="case__steps">
+              <li><b>Add.</b> Entries go in through a simple web form instead of scrolling a spreadsheet on a phone.</li>
+              <li><b>Store.</b> An Express server writes each entry to the sheet using the Google Sheets API.</li>
+              <li><b>Review.</b> The app reads the sheet back to show spending by category.</li>
+            </ol>
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Node.js</li><li>Express</li><li>Google Sheets API</li><li>Render</li></ul>
+            <div class="chapter__links"><a href="#" class="btn btn--ghost">Source <span>↗</span></a></div>
+          </section>
+        </div>
+      </article>
+
+      <article class="case" data-case="scp" hidden>
+        <header class="case__head">
+          <div class="chapter__meta"><span class="badge badge--dev">In development</span><span class="chapter__event">Unity 6 · First-person horror</span></div>
+          <h2 class="case__title">SCP Horror</h2>
+          <p class="case__lede">A first-person horror game set in the SCP universe. Something has broken containment, and you're still inside.</p>
+        </header>
+        <div class="case__visual"></div>
+        <div class="case__stats">
+          <div><b>Unity 6</b><span>engine</span></div>
+          <div><b>C#</b><span>gameplay code</span></div>
+          <div><b>WIP</b><span>active development</span></div>
+        </div>
+        <div class="case__body">
+          <section class="case__block">
+            <h3>The idea</h3>
+            <p>Tight corridors, failing lights and things that move when you aren't looking. The game leans on the SCP Foundation's clinical tone to make the horror feel procedural and cold.</p>
+          </section>
+          <section class="case__block">
+            <h3>Status</h3>
+            <p>Still in development. Screenshots and a playable build will appear here as it comes together.</p>
+          </section>
+          <section class="case__block">
+            <h3>Built with</h3>
+            <ul class="tags"><li>Unity 6</li><li>C#</li><li>Game design</li></ul>
+          </section>
+        </div>
+      </article>
+
+      <footer class="case__foot">
+        <span class="mono">Up next</span>
+        <button class="case__nextbig" id="deepNextBig" data-cursor="Next"><span id="deepNextName">Verity</span> <i aria-hidden="true">→</i></button>
+      </footer>
+    </div>
+  </div>
 
   <script src="vendor/gsap.min.js"></script>
   <script src="vendor/ScrollTrigger.min.js"></script>
