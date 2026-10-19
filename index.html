@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ishtiaq Sahil — AI agents, game servers &amp; mods</title>
+  <meta name="description" content="Portfolio of Ishtiaq Sahil: hackathon-certified AI agent systems (ARGUS, Verity), the HelixMC Minecraft network, Fabric mods and more.">
+  <meta name="theme-color" content="#0a0c0f">
+  <meta property="og:title" content="Ishtiaq Sahil — Portfolio">
+  <meta property="og:description" content="AI agent systems, Minecraft networks and mods.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0c0f'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='15' fill='%237c9bff' text-anchor='middle'%3EIS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">Ishtiaq Sahil</span>
+      <span class="loader__count"><span id="loaderNum">0</span>%</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em></em></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo" data-cursor="Top"><span>IS</span><i>Ishtiaq Sahil</i></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav__cta">Get in touch</a>
+    </nav>
+  </header>
+
+  <!-- Chapter index (desktop) -->
+  <aside class="rail" aria-label="Projects">
+    <ol>
+      <li><a href="#argus" data-rail="argus"><span>ARGUS</span></a></li>
+      <li><a href="#verity" data-rail="verity"><span>Verity</span></a></li>
+      <li><a href="#helix" data-rail="helix"><span>HelixMC</span></a></li>
+      <li><a href="#spotify" data-rail="spotify"><span>Spotify HUD</span></a></li>
+      <li><a href="#finance" data-rail="finance"><span>Finance tracker</span></a></li>
+      <li><a href="#scp" data-rail="scp"><span>SCP game</span></a></li>
+    </ol>
+  </aside>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-theme-bg="#0a0c0f" data-theme-accent="#7c9bff">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <p class="eyebrow hero__eyebrow"><span class="dot"></span>Developer · Modder · Hackathon builder</p>
+        <h1 class="hero__title" data-split>
+          I build <em>AI agents</em>,<br>
+          game servers <span class="amp">&amp;</span> mods.
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__lede">Two hackathon certificates for multi-agent AI systems. A Minecraft network running on plugins I wrote myself. Mods, tools and a horror game in progress.</p>
+          <div class="hero__stats">
+            <div><b data-count="2">2</b><span>hackathon<br>certificates</span></div>
+            <div><b data-count="1.0000" data-decimals="4">1.0000</b><span>ARGUS<br>benchmark score</span></div>
+            <div><b data-count="6">6</b><span>projects<br>featured</span></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" data-cursor="Scroll"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Tools I use">
+      <div class="marquee__track">
+        <span>Python</span><span>FastAPI</span><span>Multi-agent systems</span><span>Sui</span><span>Walrus</span><span>Java</span><span>Fabric</span><span>Velocity</span><span>Paper</span><span>Node.js</span><span>Express</span><span>Unity 6</span><span>C#</span><span>Vercel</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" data-theme-bg="#0a0c0f" data-theme-accent="#7c9bff">
+      <p class="eyebrow">About</p>
+      <!-- Edit this paragraph to change your bio. Words light up as the visitor scrolls. -->
+      <p class="about__text" data-highlight>
+        I like problems where the answer has to be right, not just plausible. That means AI pipelines that know when they are unsure, judges that check each other, and game servers that stay up when real players log in. I ship fast at hackathons and keep maintaining what I build after.
+      </p>
+      <div class="about__grid">
+        <div class="about__card">
+          <span class="mono">01 — AI systems</span>
+          <p>Multi-agent pipelines, LLM evaluation, confidence gating, on-chain verification.</p>
+        </div>
+        <div class="about__card">
+          <span class="mono">02 — Minecraft</span>
+          <p>Network infrastructure, custom Paper and Velocity plugins, Fabric client mods.</p>
+        </div>
+        <div class="about__card">
+          <span class="mono">03 — Tools &amp; games</span>
+          <p>Practical web apps for real people, and a Unity horror game in development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK INTRO ============ -->
+    <section class="work-intro" id="work">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="work-intro__title" data-split>Six projects,<br><em>one</em> scroll.</h2>
+      <div class="work-intro__line"><span></span></div>
+    </section>
+
+    <!-- ============ ARGUS ============ -->
+    <section class="chapter" id="argus" data-theme-bg="#0d0b07" data-theme-accent="#f5a524">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">01 <i>/ 06</i></span>
+          <span class="badge badge--award">Hackathon certificate</span>
+        </div>
+        <p class="chapter__event">Averis × Monash Hackathon</p>
+        <h3 class="chapter__title" data-split>ARGUS</h3>
+        <p class="chapter__desc">Shipping-document verification that checks a Shipping Instruction against its Bill of Lading. Seven field agents work in parallel, then a confidence gate modelled on the fruit fly olfactory circuit decides whether each answer is certain enough to pass.</p>
+        <div class="chapter__stats">
+          <div><b data-count="1.0000" data-decimals="4">1.0000</b><span>benchmark score</span></div>
+          <div><b data-count="520">520</b><span>emails tested</span></div>
+          <div><b data-count="7">7</b><span>parallel agents</span></div>
+        </div>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>Multi-agent</li><li>Vercel</li></ul>
+        <div class="chapter__links">
+          <!-- TODO: replace # with your live demo and repo URLs -->
+          <a href="#" class="btn" data-magnetic>Live demo <span>↗</span></a>
+          <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
+        </div>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--argus">
+          <span class="stage__label mono">SI ⇄ BL verification</span>
+          <svg id="argusSvg" viewBox="0 0 560 440" role="img" aria-label="Two documents feed seven parallel field agents, which converge on a confidence gate that outputs a verified result."></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VERITY ============ -->
+    <section class="chapter chapter--flip" id="verity" data-theme-bg="#070c14" data-theme-accent="#4da2ff">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">02 <i>/ 06</i></span>
+          <span class="badge badge--award">Hackathon certificate</span>
+        </div>
+        <p class="chapter__event">MUBA Hacks 2026 · Sui Track &amp; Gonka Challenge</p>
+        <h3 class="chapter__title" data-split>Verity</h3>
+        <p class="chapter__desc">Certification for AI agents. Three independent models judge every agent, tests run in English, Chinese and Japanese, and the verdict is written to Sui with the full evidence stored on Walrus, so anyone can verify a certificate without trusting us.</p>
+        <div class="chapter__stats">
+          <div><b data-count="3">3</b><span>judge models</span></div>
+          <div><b data-count="3">3</b><span>test languages</span></div>
+          <div><b>On-chain</b><span>results on Sui</span></div>
+        </div>
+        <ul class="tags"><li>Sui</li><li>Walrus</li><li>Gonka</li><li>LLM evaluation</li></ul>
+        <div class="chapter__links">
+          <a href="#" class="btn" data-magnetic>Live demo <span>↗</span></a>
+          <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
+        </div>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--verity">
+          <span class="stage__label mono">Certification run</span>
+          <div class="vt">
+            <div class="vt__agent">
+              <span class="mono">agent under test</span>
+              <b>support-bot-v2</b>
+              <div class="vt__langs"><span>EN</span><span>中文</span><span>日本語</span></div>
+            </div>
+            <div class="vt__judges">
+              <div class="vt__judge"><span class="mono">Judge A</span><div class="vt__bar"><i style="--v:.92"></i></div><b>92</b></div>
+              <div class="vt__judge"><span class="mono">Judge B</span><div class="vt__bar"><i style="--v:.88"></i></div><b>88</b></div>
+              <div class="vt__judge"><span class="mono">Judge C</span><div class="vt__bar"><i style="--v:.95"></i></div><b>95</b></div>
+            </div>
+            <div class="vt__verdict"><span class="mono">consensus</span><b>Certified</b></div>
+            <div class="vt__chain">
+              <div class="vt__block"><span>Sui</span><code>0x8f3a…c21</code></div>
+              <div class="vt__block"><span>Sui</span><code>0x1b77…e90</code></div>
+              <div class="vt__block vt__block--new"><span>Sui · cert</span><code>0x4d0e…a5f</code></div>
+              <div class="vt__blob"><span>Walrus</span><code>evidence blob</code></div>
+            </div>
+          </div>
+          <span class="stage__note mono">Illustration · sample values</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HELIX ============ -->
+    <section class="chapter" id="helix" data-theme-bg="#06100f" data-theme-accent="#34d5c8">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">03 <i>/ 06</i></span>
+          <span class="badge">Minecraft network</span>
+        </div>
+        <p class="chapter__event">Formerly Project Re-genesis</p>
+        <h3 class="chapter__title" data-split>HelixMC</h3>
+        <p class="chapter__desc">A multi-server Minecraft network behind a Velocity proxy, with a hub and Rust-style survival servers. I wrote the core plugins myself: HelixSpawn handles spawning across 30+ game versions, and LoopManager runs the network's timed systems.</p>
+        <div class="chapter__stats">
+          <div><b data-count="1100" data-prefix="~">~1100</b><span>lines in HelixSpawn</span></div>
+          <div><b data-count="30" data-suffix="+">30+</b><span>versions supported</span></div>
+          <div><b data-count="2">2</b><span>custom plugins</span></div>
+        </div>
+        <ul class="tags"><li>Java</li><li>Velocity</li><li>Paper</li><li>Plugin dev</li></ul>
+        <div class="chapter__links">
+          <!-- TODO: add server IP / Discord -->
+          <a href="#" class="btn" data-magnetic>Join the server <span>↗</span></a>
+        </div>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--helix">
+          <span class="stage__label mono">Network topology</span>
+          <svg id="helixSvg" viewBox="0 0 560 440" role="img" aria-label="Players connect through a Velocity proxy to a hub and two survival servers."></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPOTIFY HUD ============ -->
+    <section class="chapter chapter--flip" id="spotify" data-theme-bg="#07100a" data-theme-accent="#1ed760">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">04 <i>/ 06</i></span>
+          <span class="badge">Fabric mod · MC 26.2</span>
+        </div>
+        <p class="chapter__event">Client-side mod</p>
+        <h3 class="chapter__title" data-split>Spotify HUD</h3>
+        <p class="chapter__desc">See what's playing without alt-tabbing. The mod draws a now-playing HUD in game with play, pause and skip controls, and handles Spotify sign-in from inside Minecraft using OAuth.</p>
+        <div class="chapter__stats">
+          <div><b>26.2</b><span>Minecraft version</span></div>
+          <div><b>In-game</b><span>OAuth sign-in</span></div>
+          <div><b>Live</b><span>playback controls</span></div>
+        </div>
+        <ul class="tags"><li>Java</li><li>Fabric</li><li>Spotify Web API</li><li>OAuth</li></ul>
+        <div class="chapter__links">
+          <a href="#" class="btn" data-magnetic>Download <span>↗</span></a>
+          <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
+        </div>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--mc">
+          <div class="mc">
+            <div class="mc__sky"></div>
+            <div class="mc__sun"></div>
+            <div class="mc__cloud mc__cloud--1"></div>
+            <div class="mc__cloud mc__cloud--2"></div>
+            <div class="mc__hills"></div>
+            <div class="mc__ground"></div>
+            <div class="mc__cross" aria-hidden="true"></div>
+            <div class="mc__hotbar" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="hud">
+              <div class="hud__art"><div class="hud__eq"><i></i><i></i><i></i><i></i></div></div>
+              <div class="hud__body">
+                <span class="hud__title">Now playing</span>
+                <span class="hud__artist">Your Spotify queue</span>
+                <div class="hud__bar"><i id="hudProgress"></i></div>
+                <div class="hud__time mono"><span id="hudNow">0:00</span><span>3:24</span></div>
+                <div class="hud__ctrl" aria-hidden="true"><span>⏮</span><span class="play">⏸</span><span>⏭</span></div>
+              </div>
+            </div>
+          </div>
+          <span class="stage__note mono">Mock-up · add a real screenshot in /assets</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINANCE ============ -->
+    <section class="chapter" id="finance" data-theme-bg="#0c0a12" data-theme-accent="#b79cff">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">05 <i>/ 06</i></span>
+          <span class="badge">Web app</span>
+        </div>
+        <p class="chapter__event">Built for my brother</p>
+        <h3 class="chapter__title" data-split>Finance tracker</h3>
+        <p class="chapter__desc">A budgeting app that uses a Google Sheet as its database, so everything stays editable by hand. A small Node and Express app on top makes adding and reviewing spending quick, and it runs on Render.</p>
+        <div class="chapter__stats">
+          <div><b>Sheets</b><span>as the database</span></div>
+          <div><b>Node</b><span>Express backend</span></div>
+          <div><b>Render</b><span>hosted</span></div>
+        </div>
+        <ul class="tags"><li>Node.js</li><li>Express</li><li>Google Sheets API</li><li>Render</li></ul>
+        <div class="chapter__links">
+          <a href="#" class="btn btn--ghost" data-magnetic>Source <span>↗</span></a>
+        </div>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--fin">
+          <span class="stage__label mono">Budget · October</span>
+          <div class="fin">
+            <div class="fin__sheet" role="table" aria-label="Sample spending entries">
+              <div class="fin__row fin__row--head" role="row"><span>Date</span><span>Category</span><span>Amount</span></div>
+              <div class="fin__row" role="row"><span>02 Oct</span><span><i style="--c:#b79cff"></i>Groceries</span><span>$84.20</span></div>
+              <div class="fin__row" role="row"><span>05 Oct</span><span><i style="--c:#ff9f6e"></i>Transport</span><span>$32.00</span></div>
+              <div class="fin__row" role="row"><span>09 Oct</span><span><i style="--c:#6ee0c0"></i>Bills</span><span>$120.00</span></div>
+              <div class="fin__row" role="row"><span>14 Oct</span><span><i style="--c:#b79cff"></i>Groceries</span><span>$61.75</span></div>
+              <div class="fin__row" role="row"><span>18 Oct</span><span><i style="--c:#ffd36e"></i>Fun</span><span>$45.00</span></div>
+            </div>
+            <div class="fin__side">
+              <div class="fin__total"><span class="mono">spent</span><b>$<span data-count="342.95" data-decimals="2">342.95</span></b></div>
+              <div class="fin__bars">
+                <div><i style="--h:.85;--c:#b79cff"></i><span>Groc</span></div>
+                <div><i style="--h:.32;--c:#ff9f6e"></i><span>Trans</span></div>
+                <div><i style="--h:.7;--c:#6ee0c0"></i><span>Bills</span></div>
+                <div><i style="--h:.45;--c:#ffd36e"></i><span>Fun</span></div>
+              </div>
+            </div>
+          </div>
+          <span class="stage__note mono">Illustration · sample data</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCP ============ -->
+    <section class="chapter chapter--flip chapter--scp" id="scp" data-theme-bg="#0e0606" data-theme-accent="#ff3b30">
+      <div class="chapter__text">
+        <div class="chapter__meta">
+          <span class="chapter__num">06 <i>/ 06</i></span>
+          <span class="badge badge--dev">In development</span>
+        </div>
+        <p class="chapter__event">Unity 6 · First-person horror</p>
+        <h3 class="chapter__title" data-split>SCP Horror</h3>
+        <p class="chapter__desc">A first-person horror game set in the SCP universe. Containment breaches, tight corridors and things that move when you aren't looking. Built in Unity 6 and still in active development.</p>
+        <p class="redact"><span>Object class:</span> <mark>████████</mark> &nbsp; <span>Site:</span> <mark>██</mark> &nbsp; <span>Release:</span> <mark>████ ████</mark></p>
+        <ul class="tags"><li>Unity 6</li><li>C#</li><li>Game design</li></ul>
+      </div>
+      <div class="chapter__stage">
+        <div class="stage stage--scp">
+          <div class="door">
+            <div class="door__behind">
+              <span class="mono">containment cell</span>
+              <b>SCP-<span class="flick">███</span></b>
+              <span class="mono">breach detected</span>
+            </div>
+            <div class="door__half door__half--l"><span>SECURE</span></div>
+            <div class="door__half door__half--r"><span>CONTAIN</span></div>
+            <div class="door__light"></div>
+          </div>
+          <span class="stage__label mono">Site ██ · Sector 4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKSHOP ============ -->
+    <section class="workshop">
+      <p class="eyebrow">Also on the bench</p>
+      <div class="workshop__row">
+        <h4>Excavatica</h4>
+        <p>An early-stage Minecraft mod.</p>
+        <span class="badge badge--dev">In development</span>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" data-theme-bg="#0a0c0f" data-theme-accent="#7c9bff">
+      <p class="eyebrow">Contact</p>
+      <h2 class="contact__title" data-split>Let's build<br>something <em>real</em>.</h2>
+      <div class="contact__row">
+        <button class="contact__email" id="copyEmail" data-email="ishtiaqsahil8@gmail.com" data-magnetic data-cursor="Copy">
+          <span class="contact__email-text">ishtiaqsahil8@gmail.com</span>
+          <span class="contact__email-hint mono" id="copyHint">Click to copy</span>
+        </button>
+      </div>
+      <!-- TODO: replace # with your profile URLs -->
+      <ul class="contact__links">
+        <li><a href="#" data-magnetic>GitHub <span>↗</span></a></li>
+        <li><a href="#" data-magnetic>LinkedIn <span>↗</span></a></li>
+        <li><a href="#" data-magnetic>Discord <span>↗</span></a></li>
+        <li><a href="#" data-magnetic>Résumé <span>↗</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Ishtiaq Sahil</span>
+    <a href="#top" data-cursor="Top">Back to top ↑</a>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
